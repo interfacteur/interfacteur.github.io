@@ -3,35 +3,184 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Recherche de dépôts sur Github</title>
-<link rel="stylesheet" href="/css/fonts.css">
-<link rel="stylesheet" href="/css/generiques.css">
-<link rel="stylesheet" href="/css/styles.css">
-<link rel="stylesheet" href="/css/_h.css">
-<meta name="author" content="Gaëtan Langhade, Interfacteur">
+<title>Gaëtan Langhade, Interfacteur \ démos</title>
+<meta name="author" content="Gaëtan Langhade, interfacteur">
+
+
+<style>
+/* Personnel draft for booting CSS - Interfacteur
+	rules to be tested like those with 'vertical-align: baseline', and for multimedia
+Sources: normalize boilerplate etc. */
+
+
+/*
+	STANDARD */
+body	{
+	background: #FFF;
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	line-height: 1.5;
+	min-height: 100%;
+}
+*	{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body::before	{
+	content: "\8";
+	display: block;
+	height: 0;
+	text-indent: -4444px;
+}
+body::after,
+.clear::after	{
+	clear: both;
+	content: " ";
+	display: block;
+}
+html	{
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: sans-serif;
+	/* font-size: 10px; */
+	height: 100%;
+}
+
+/*
+	RESET (median) */
+html, body, div, iframe,
+header, nav, main, section, article, aside,
+h1, h2, h3, h4, h5, h6, p, pre,
+dl, dt, dd, ol, ul, li,
+form, fieldset, legend,
+button, input, keygen, optgroup, output, select, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+figure, figcaption, summary, details,
+audio, canvas, embed, math, object, svg, video,
+ruby, meter, progress	{
+	margin: 0;
+	padding: 0;
+}
+img, a img, img[usemap],
+fieldset	{
+	border: 0;
+}
+
+/*
+	NORMALIZE (reduced - for typo and form, see bottom) */
+article, aside, details, figcaption, figure, footer,
+header, main, menu, nav, section, summary	{
+	display: block;
+}
+ol, ul, li	{
+	list-style: none;
+}
+img	{
+	vertical-align: middle;
+}
+span, a, abbr, cite, code, del, dfn, em, ins,
+kbd, q, s, samp, small, strong, var, b, u, i, time, mark, ruby, bdo, bdi	{
+	vertical-align: baseline;
+}
+pre	{
+	overflow: auto;
+}
+hr	{
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+
+
+/*
+	TYPOGRAPHY */
+a	{
+	background: transparent;
+	color: #000;
+	text-decoration: underline;
+}
+a:focus,
+a:hover	{
+	text-decoration: none;
+}
+a:focus	{
+	outline: thin dotted;
+}
+a:active, a:hover	{
+	outline: 0;
+}
+abbr[title]	{
+	border-bottom: 1px dotted;
+}
+b, strong	{
+	font-weight: bold;
+}
+
+section	{
+	margin: 1em;
+}
+
+h1	{
+	float: left;
+	font-size: 1.3em;
+	margin: 1em 0;
+}
+
+h2	{
+	font-size: 1.15em;
+	margin: 1em 0;
+}
+address	{
+	float: right;
+}
+figure	{
+	float: left;
+	margin: 2em;
+}
+figcaption	{
+	background: #6B808D;
+	border-radius: .5em .5em .33em .33em;
+	color: #FFF;
+	font-style: italic;
+	padding: .5em 0;
+	text-align: center;
+}
+figure p	{
+	font-size: .8em;
+	text-align: center;
+}
+
+
+</style>
 </head>
 
 <body>
-
 <section>
-	<h1>Recherche de dépôts sur Github
-		<span>et info contributeurs et commits</span>
-	</h1>
-	<div id="contentRepos"></div>
-	<div id="contentRepo" class="content"></div>
+	<div class="clear">
+		<h1>Interfacteur</h1>
+		<address>
+			<a href="http://gaetan.langhade.net">gaetan.langhade.net</a>
+			<img src="images/logo-interfacteur-noir.svg" width="74" height="58" />
+		</address>
+	</div>
+	<h2>Des réalisations</h2>
+	<figure style="width: 309px;">
+		<figcaption>React : interface monopage avec timeline</figcaption>
+		<a href="http://www.equatorium.net/e1/in--interfaces/githubapi/"><img src="images/vignette-githubapi.png" height="296" width="309" alt=""></a>
+		<p><a href="http://interfacteur.blogspot.fr/2015/11/react-interface-monopage-avec-timeline.html">Une présentation</a></p>
+		<p><a href="https://github.com/interfacteur/github-api">Dépôt sur Github</a></p>
+	</figure>
+	<figure style="width: 267px;">
+		<figcaption>Jeu du puzze, autres jeux</figcaption>
+		<a href="http://www.langhade.net/ludwik/jeux/jeu-puzzle1.html"><img src="images/vignette-puzzle.png" height="296" width="267" alt=""></a>
+		<p><a href="http://interfacteur.blogspot.fr/2015/06/jeux-d-oiseaux-1-presentation.html">Une présentation</a></p>
+		<p><a href="https://github.com/interfacteur/ludwik">Dépôt sur Github</a></p>
+	</figure>
+	<figure style="width: 296px;">
+		<figcaption>Player image par image </figcaption>
+		<a href="http://www.equatorium.net/e1/in-player-animateur.html"><img src="images/vignette-pseudoplayer.png" height="260" width="296" alt=""></a>
+	</figure>
 </section>
-
-
-
-
-<script src="/js/lib/react.min.js"></script>
-<script src="/js/lib/react-dom.min.js"></script>
-<script src="/js/lib/browser.min.js"></script>
-<script src="/js/lib/jquery.min.js"></script>
-<script src="/js/lib/marked.min.js"></script>
-<script src="/js/var.js"></script>
-<script src="/js/utils.js"></script>
-<script type="text/babel" src="/js/web-appli.js"></script>
 </body>
-
 </html>
